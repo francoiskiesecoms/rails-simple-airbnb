@@ -1,0 +1,36 @@
+
+
+
+<!-- .... -->
+
+<div id="container">
+  <div class="row">
+    <h1>All ours flats</h1>
+  </div>
+  <div class="row">
+    <h3>Your searched for it</h3>
+  </div>
+  <div class="cards">
+    <% @flats.each do |flat| %>
+    <div class="card">
+      <div class="card_head">
+
+      </div>
+      <div class="card_body">
+          <h4> <%=flat.name %> </h4>
+          <p> <%=flat.description %> </p>
+          <div class="flex">
+            <%=flat.number_of_guests %>
+            <%=flat.price_per_night %>
+          </div>
+      </div>
+      <div class="card_footer">
+        <%= link_to "More infos", flat_path(flat)%>
+        <%= link_to "Edit", '#' %>
+        <%= link_to "Remove", '#' %>
+      </div>
+    </div>
+    <%end%>
+  </div>
+</div>
+

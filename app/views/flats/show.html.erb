@@ -1,0 +1,52 @@
+<div class="banner">
+
+</div>
+
+<div id="container">
+  <div class="cards" id="show">
+    <div class="left">
+      <div class="head">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+
+      </div>
+      <div class="infos">
+        <h3>A bit more about this flat</h3>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="book">
+        <h5>Book this place</h5>
+
+        <form>
+          <div class="form-group">
+            <label for="from">From</label>
+            <input type="text" class="form-control" id="from" placeholder="12/17/2018">
+          </div>
+
+          <div class="form-group">
+            <label for="to">To</label>
+            <input type="text" class="form-control" id="to" placeholder="12/17/2018">
+          </div>
+          <button type="submit" class="btn btn-primary">Book</button>
+        </form>
+
+      </div>
+      <div class="details">
+        <h3>Details</h3>
+        <div class="flex">
+          <%=@flat.number_of_guests %>
+          <%=@flat.price_per_night %>
+        </div>
+      </div>
+      <div class="share">
+        <div class="flex">
+          <h6>Share</h6>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
